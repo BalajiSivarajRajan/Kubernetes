@@ -59,5 +59,11 @@ You can use an existing domain or register a new domain. In this example, I am g
 Domain registration on dot.tk / freenom.com:
 I have registred a new domain on freenom.com with the name k8sclustersetup.tk. 
 
+<<screen shot here >>
+
+On AWS console, create a new Hosted zone on router 53. Login to AWS console, navigate to router53 DNS management and create new Hosted Zone. This creates set of name servers. Copy the name server details which will start with ns-xxx.awsdns-xx.com, ns-xxx.awsdns-xx.co.uk, ns-xxx.awsdns-xx.org, ns-xxx.awsdns-xx.net. These NS values has to be updated on domain service provider. In my case I have updated the NS details.
+
+<< screen shot here >>
+
 
 – S3 bucket
