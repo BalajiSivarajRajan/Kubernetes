@@ -45,13 +45,19 @@ On AWS console, create a new IAM user (for example kops) with full access and sa
 
 On EC2 instance, configure the newly created AWS IAM user
 	$aws configure 
-			AWS Access Key ID [None]: <AWS user access key ID >
-			AWS Secret Access Key [None]: <AWS secret access key>
-			Default region name [None]:
-			Default output format [None]:
+		AWS Access Key ID [None]: <AWS user access key ID >
+		AWS Secret Access Key [None]: <AWS secret access key>
+		Default region name [None]:
+		Default output format [None]:
 	Please enter the AWS access key ID & Secret Access Key for the newly created IAM user. Default region & output format can be left bank.
 	
 Create a domain for the cluster
+kops uses DNS for discovery, inside the cluster and to reach the kubernetes API server from client. Its should be vaild DNS name. You can use subdomain and I recommed to use a subdomain for the cluster configuration. 
+
+You can use an existing domain or register a new domain. In this example, I am going to a domain hosted on dot.tk which is free domain provider. 
+
+Domain registration on dot.tk / freenom.com:
+I have registred a new domain on freenom.com with the name k8sclustersetup.tk. 
 
 
 – S3 bucket
