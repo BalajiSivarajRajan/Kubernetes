@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nexus-svc
+  labels:
+    app: nexus-svc
+spec:
+  type: NodePort
+  ports:
+    - port: 8081
+      targetPort: 8081
+      name: nexusport
+  selector:
+    app: nexus
+  type: LoadBalancer
